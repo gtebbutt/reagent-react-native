@@ -3,6 +3,7 @@
     ["react-native" :as rn]
     ["react" :as react]
     ["create-react-class" :as crc]
+    ["./error" :as demo]
     [reagent.core :as r]
     ))
 
@@ -28,7 +29,8 @@
 (defn root []
   [:> rn/View {:style (.-container styles)}
    [:> rn/Text {:style (.-title styles)} "Hello!"]
-   [:> rn/Image {:source splash-img :style {:width 200 :height 200}}]])
+   [:> rn/Image {:source splash-img :style {:width 200 :height 200}}]
+   [:> demo/myComponent]])
 
 (defonce root-ref (atom nil))
 (defonce root-component-ref (atom nil))
